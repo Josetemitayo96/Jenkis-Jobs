@@ -16,7 +16,7 @@ job('Nodejs dsl docker example'){
     steps {
         dockerBuildAndPublish {
             repositoryName('tayo96/docker-node-app')
-            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=9}')
+            tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
